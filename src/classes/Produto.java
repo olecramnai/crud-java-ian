@@ -124,7 +124,7 @@ public class Produto{
             System.out.print("Erro no adicionar Produto: " + e.toString()); 
         }
     }
-
+    
     public void atualizar (){
         String sql = "UPDATE produtos SET categoria_id = ?, nome = ?, preco = ?, quantidade = ?  WHERE id = ? ";
         try{
@@ -141,7 +141,20 @@ public class Produto{
             System.out.print("Erro no Atualizar Produto: " + e.toString()); 
         }   
     }
+
+    public void excluir (){
+        String sql = "DELETE FROM produtos WHERE id = ?";
+        
+        try{
+            Connection con = DB.conexao();
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setInt(1, this.getId());
+            stmt.executeUpdate();
+
+        }catch(SQLException e){
+            System.out.println("Erro no Excluir do Produto"+ e.toString());
+        }
+    }
     
- 
-    
+
 }
