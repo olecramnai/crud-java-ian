@@ -13,8 +13,21 @@ public class App {
         // Categoria categoria = new Categoria(2);
         // System.out.println(categoria.getNome());
 
+
+        // Produto p = new Produto();
+        // p.setCategoriaId(1);
+        // p.setNome("Produto 01");
+        // p.setPreco(9.99);    	
+        // p.setQuantidade(12); 
+        // p.adicionar();   
+
         // BUSCAR PRODUTO
-        // Produto produto = new Produto(2);
-        // System.out.println(produto.getNome());
+        Produto produto = new Produto(1); 
+                produto.setPreco(99.99);    	
+                produto.atualizar();
+
+
+
+        System.out.println(produto.getNome());
     }
 }
