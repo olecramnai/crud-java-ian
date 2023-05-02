@@ -1,4 +1,4 @@
-import classes.Categoria;
+//import classes.Categoria;
 import classes.Produto;
 
 public class App {
@@ -25,8 +25,6 @@ public class App {
         Produto produto = new Produto(1); 
                 produto.setPreco(99.99);    	
                 produto.atualizar();
-
-
 
         System.out.println(produto.getNome());
     }
